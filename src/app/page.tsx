@@ -150,6 +150,7 @@ export default function HomePage() {
             <Link href="/programmes">Programmes</Link>
             <Link href="/how-it-works">How It Works</Link>
             <Link href="/contact">Contact</Link>
+            <Link href="/faq">FAQs</Link>
           </nav>
 
           <Link className="button button-primary nav-cta" href="/contact">

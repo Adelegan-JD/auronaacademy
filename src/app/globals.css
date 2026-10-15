@@ -845,3 +845,156 @@ img {
     flex-direction: column;
   }
 }
+
+/* Supporting pages */
+
+.page-intro {
+  max-width: 760px;
+  margin-block: 1.5rem 3rem;
+  color: var(--color-muted);
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.content-panel {
+  max-width: 850px;
+  margin-bottom: 2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.content-panel h2 {
+  margin-top: 0;
+  font-size: 1.75rem;
+}
+
+.content-panel p {
+  color: var(--color-muted);
+}
+
+.programme-heading {
+  margin-top: 1.25rem;
+  font-size: 1.4rem;
+}
+
+.process-list {
+  display: grid;
+  max-width: 850px;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.process-item {
+  display: flex;
+  gap: 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.process-number {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 0.75rem;
+  background: var(--color-cyan);
+  color: var(--color-blue);
+  font-weight: 800;
+}
+
+.process-item h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.process-item p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.faq-list {
+  display: grid;
+  max-width: 850px;
+  gap: 1rem;
+  margin-inline: auto;
+}
+
+.faq-item {
+  border: 1px solid var(--color-border);
+  border-radius: 0.875rem;
+  background: #ffffff;
+  padding: 1.25rem 1.5rem;
+}
+
+.faq-item summary {
+  color: var(--color-navy);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.faq-item p {
+  margin-bottom: 0;
+  color: var(--color-muted);
+  line-height: 1.8;
+}
+
+@media (max-width: 640px) {
+  .content-panel {
+    padding: 1.25rem;
+  }
+
+  .process-item {
+    padding: 1rem;
+  }
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background: #ffffff;
+}
+
+.contact-card > svg {
+  color: var(--color-blue);
+}
+
+.contact-card h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.contact-card p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.contact-card span {
+  margin-top: 0.5rem;
+  color: var(--color-blue);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.contact-card:hover {
+  border-color: var(--color-blue);
+}
+
+@media (max-width: 760px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
