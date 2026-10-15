@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import EnquiryForm from "@/components/EnquiryForm";
 import {
   Mail,
   MessageCircle,
@@ -12,6 +13,9 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const endpoint =
+    process.env.NEXT_PUBLIC_ENQUIRY_ENDPOINT ?? "";
+
   return (
     <main>
       <section className="section">
@@ -28,47 +32,61 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <div className="contact-grid">
-            <a
-              className="contact-card"
-              href="https://wa.me/14313238372"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <MessageCircle size={28} aria-hidden="true" />
+          <div className="contact-layout">
+            <div>
+              <h2>Send an Enquiry</h2>
 
-              <h2>WhatsApp</h2>
+              <p className="contact-intro">
+                Share a few details so we can understand the
+                learning support you are looking for.
+              </p>
 
-              <p>Start a conversation with Aurona Academy.</p>
+              <EnquiryForm endpoint={endpoint} />
+            </div>
 
-              <span>Open WhatsApp</span>
-            </a>
+            <aside className="contact-sidebar">
+              <h2>Prefer to contact us directly?</h2>
 
-            <a
-              className="contact-card"
-              href="tel:+14313238372"
-            >
-              <Phone size={28} aria-hidden="true" />
+              <a
+                className="contact-method"
+                href="https://wa.me/14313238372"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle size={22} aria-hidden="true" />
 
-              <h2>Telephone</h2>
+                <span>
+                  <strong>WhatsApp</strong>
+                  <small>Start a conversation</small>
+                </span>
+              </a>
 
-              <p>Contact us using the number shown on our flyer.</p>
+              <a
+                className="contact-method"
+                href="tel:+14313238372"
+              >
+                <Phone size={22} aria-hidden="true" />
 
-              <span>+1 (431) 323-8372</span>
-            </a>
+                <span>
+                  <strong>Telephone</strong>
+                  <small>+1 (431) 323-8372</small>
+                  <small>+234 (70) 6939 6914</small>
+                  <small>+234 (81) 6254 1654</small>
+                </span>
+              </a>
 
-            <a
-              className="contact-card"
-              href="mailto:auronaacademy@gmail.com"
-            >
-              <Mail size={28} aria-hidden="true" />
+              <a
+                className="contact-method"
+                href="mailto:auronaacademy@gmail.com"
+              >
+                <Mail size={22} aria-hidden="true" />
 
-              <h2>Email</h2>
-
-              <p>Send us a message about your learning needs.</p>
-
-              <span>auronaacademy@gmail.com</span>
-            </a>
+                <span>
+                  <strong>Email</strong>
+                  <small>auronaacademy@gmail.com</small>
+                </span>
+              </a>
+            </aside>
           </div>
         </div>
       </section>

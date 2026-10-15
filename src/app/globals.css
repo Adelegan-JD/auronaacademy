@@ -998,3 +998,156 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.8fr);
+  align-items: start;
+  gap: 3rem;
+}
+
+.contact-layout h2 {
+  font-size: 1.75rem;
+}
+
+.contact-intro {
+  color: var(--color-muted);
+}
+
+.enquiry-form {
+  display: grid;
+  gap: 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background: #ffffff;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.5rem;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.form-field > label,
+.form-field legend {
+  color: var(--color-navy);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.form-field input:not([type="checkbox"]):not([type="radio"]),
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #bdcbd5;
+  border-radius: 0.625rem;
+  background: #ffffff;
+  padding: 0.8rem 0.9rem;
+  color: var(--color-text);
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.consent-field > label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.consent-field input {
+  margin-top: 0.35rem;
+  flex-shrink: 0;
+}
+
+.form-submit {
+  width: 100%;
+  cursor: pointer;
+}
+
+.form-submit:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.form-message {
+  border-radius: 0.625rem;
+  padding: 0.9rem;
+}
+
+.form-error {
+  background: #fff0f0;
+  color: #9b1c1c;
+}
+
+.form-success {
+  background: #eaf8ef;
+  color: #17663a;
+}
+
+.contact-sidebar {
+  display: grid;
+  gap: 1rem;
+  border-radius: 1rem;
+  background: var(--color-surface);
+  padding: 1.5rem;
+}
+
+.contact-sidebar h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.contact-method {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-block: 1rem;
+}
+
+.contact-method > svg {
+  flex-shrink: 0;
+  color: var(--color-blue);
+}
+
+.contact-method span {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.contact-method strong {
+  color: var(--color-navy);
+}
+
+.contact-method small {
+  color: var(--color-muted);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .enquiry-form {
+    padding: 1rem;
+  }
+}
