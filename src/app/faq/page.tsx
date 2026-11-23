@@ -38,7 +38,7 @@ const questions = [
 export default function FAQPage() {
   return (
     <main>
-      <section className="section">
+      <section className="section page-section">
         <div className="container">
           <div className="section-heading">
             <span className="eyebrow">FAQs</span>
