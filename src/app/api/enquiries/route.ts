@@ -2,7 +2,6 @@ import { createHash } from "node:crypto";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
-export const runtime = "nodejs";
 
 const enquirySchema = z.object({
   name: z.string().trim().min(2).max(100),
