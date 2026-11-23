@@ -56,8 +56,36 @@ export default function ContactPage() {
                 <MessageCircle size={22} aria-hidden="true" />
 
                 <span>
-                  <strong>WhatsApp</strong>
-                  <small>Start a conversation</small>
+                  <strong>WhatsApp · Canada</strong>
+                  <small>+1 (431) 323-8372</small>
+                </span>
+              </a>
+
+              <a
+                className="contact-method"
+                href="https://wa.me/2347069396914"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle size={22} aria-hidden="true" />
+
+                <span>
+                  <strong>WhatsApp · Nigeria</strong>
+                  <small>+234 (70) 6939 6914</small>
+                </span>
+              </a>
+
+              <a
+                className="contact-method"
+                href="https://wa.me/2348162541654"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle size={22} aria-hidden="true" />
+
+                <span>
+                  <strong>WhatsApp · Nigeria</strong>
+                  <small>+234 (81) 6254 1654</small>
                 </span>
               </a>
 
