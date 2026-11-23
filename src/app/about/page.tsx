@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main>
-      <section className="section">
+      <section className="section page-section">
         <div className="container">
           <span className="eyebrow">About Aurona Academy</span>
 
