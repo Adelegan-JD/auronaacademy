@@ -70,7 +70,7 @@ const programmeGroups = [
 export default function ProgrammesPage() {
   return (
     <main>
-      <section className="section">
+      <section className="section page-section">
         <div className="container">
           <div className="section-heading">
             <span className="eyebrow">Our Programmes</span>
