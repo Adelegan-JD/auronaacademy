@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400" role="img" aria-labelledby="title desc">
+<title id="title">Students learning together</title><desc id="desc">An illustration of two students studying together at a desk with books and a laptop.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eaf1ec"/><stop offset="1" stop-color="#d8e7e1"/></linearGradient>
+ <linearGradient id="window" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d8e9e9"/><stop offset="1" stop-color="#f7f4e9"/></linearGradient>
+ <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#203e60"/><stop offset="1" stop-color="#142d4e"/></linearGradient>
+ <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2b8278"/><stop offset="1" stop-color="#176b68"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#142d4e" flood-opacity=".16"/></filter>
+</defs>
+<rect width="1200" height="1400" fill="url(#bg)"/>
+<circle cx="1030" cy="160" r="210" fill="#c9a45c" opacity=".22"/>
+<rect x="670" y="100" width="440" height="560" rx="28" fill="url(#window)" stroke="#fff" stroke-width="18"/>
+<path d="M890 100v560M670 380h440" stroke="#fff" stroke-width="18"/>
+<path d="M700 620c80-120 170-100 240-20 70-90 120-80 160-20v80H700z" fill="#a8c6b8" opacity=".55"/>
+<rect x="72" y="110" width="300" height="500" rx="18" fill="#fff" opacity=".72"/>
+<path d="M100 180h244M100 245h200M100 310h230M100 375h185" stroke="#d9e2dd" stroke-width="16" stroke-linecap="round"/>
+<g filter="url(#shadow)">
+<!-- desk -->
+<path d="M90 1110h1020l-58 220H150z" fill="#c69a6a"/><path d="M90 1110h1020v48H90z" fill="#dfb98c"/>
+<!-- student left torso -->
+<path d="M120 1010c35-230 170-320 330-300 150 20 230 150 230 400H100z" fill="url(#navy)"/>
+<path d="M250 800c70 35 160 45 250 0" fill="none" stroke="#f2eee4" stroke-width="18"/>
+<path d="M250 850c70 35 160 45 250 0" fill="none" stroke="#f2eee4" stroke-width="18"/>
+<!-- left neck and face -->
+<path d="M330 510h170v170c-30 80-140 80-170 0z" fill="#8c543e"/>
+<ellipse cx="410" cy="425" rx="155" ry="190" fill="#9b6148"/>
+<path d="M260 430c-45-150 30-290 170-300 160-10 230 100 200 260-45-70-90-95-170-100-60 60-125 80-200 75z" fill="#171d2b"/>
+<path d="M270 350c-10-180 110-270 230-235 90 25 140 95 145 185-65-70-140-90-225-65-35 65-85 105-150 115z" fill="#171d2b"/>
+<path d="M280 360c-60 40-55 130-30 180M560 340c55 50 65 130 25 190" stroke="#171d2b" stroke-width="24" fill="none" stroke-linecap="round"/>
+<path d="M350 445q28-20 55 0M440 445q28-20 55 0" stroke="#34241f" stroke-width="12" fill="none" stroke-linecap="round"/>
+<path d="M380 525q45 42 90 0" stroke="#fff0e5" stroke-width="12" fill="none" stroke-linecap="round"/>
+<circle cx="285" cy="530" r="14" fill="#c9a45c"/><circle cx="545" cy="530" r="14" fill="#c9a45c"/>
+<!-- right student torso -->
+<path d="M580 1010c5-240 120-365 290-365 170 0 250 145 250 465H570z" fill="url(#teal)"/>
+<path d="M735 660h140v95H735z" fill="#f1eee7"/>
+<path d="M765 700l45 55 45-55" fill="none" stroke="#d6d4cd" stroke-width="10"/>
+<!-- right neck and face -->
+<path d="M790 470h160v170c-35 80-130 80-160 0z" fill="#754630"/>
+<ellipse cx="870" cy="390" rx="150" ry="185" fill="#8b553c"/>
+<path d="M720 390c-20-160 65-275 180-275 135 0 200 95 170 260-60-60-125-95-225-75-35 45-75 75-125 90z" fill="#17191d"/>
+<path d="M750 370q120-100 270-15" stroke="#17191d" stroke-width="25" fill="none"/>
+<rect x="750" y="385" width="95" height="62" rx="22" fill="none" stroke="#25384a" stroke-width="12"/><rect x="875" y="385" width="95" height="62" rx="22" fill="none" stroke="#25384a" stroke-width="12"/><path d="M845 410h30" stroke="#25384a" stroke-width="12"/>
+<path d="M810 520q55 45 110 0" stroke="#fff0e5" stroke-width="12" fill="none" stroke-linecap="round"/>
+<!-- laptop -->
+<path d="M770 860h330l-30 235H735z" fill="#d7e0e2" stroke="#a8b8bd" stroke-width="12"/>
+<rect x="800" y="890" width="275" height="185" rx="12" fill="#233d56"/>
+<path d="M780 1100h360l45 35H740z" fill="#eef0e8"/>
+<!-- book -->
+<path d="M200 1060q150-40 300 15v125q-150-55-300-15z" fill="#f6f2e8" stroke="#b7a58b" stroke-width="8"/>
+<path d="M500 1075q120-60 250-15v125q-130-45-250 15z" fill="#fffdf6" stroke="#b7a58b" stroke-width="8"/>
+<path d="M500 1075v125" stroke="#c9a45c" stroke-width="8"/>
+</g>
+<!-- subtle decorative dots -->
+<g fill="#c9a45c"><circle cx="1050" cy="760" r="13"/><circle cx="1085" cy="800" r="8"/><circle cx="150" cy="760" r="10"/></g>
+</svg>
