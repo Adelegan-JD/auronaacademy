@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import SiteShell from "@/components/SiteShell";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -6,14 +7,10 @@ export const metadata: Metadata = {
     default: "Aurona Academy | Better Guidance, Brighter Futures",
     template: "%s | Aurona Academy",
   },
-
   description:
     "Explore online tutoring, academic support, and personalised learning programmes offered by Aurona Academy.",
-
   applicationName: "Aurona Academy",
-
-  metadataBase: new URL("https://auronaacademy.vercel.app"),
-
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://auronaacademy.vercel.app"),
   openGraph: {
     type: "website",
     siteName: "Aurona Academy",
@@ -21,11 +18,7 @@ export const metadata: Metadata = {
     description:
       "Personalised online tutoring and academic support for students and professionals.",
   },
-
-  robots: {
-    index: false,
-    follow: false,
-  },
+  robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
@@ -41,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body><SiteShell>{children}</SiteShell></body>
     </html>
   );
 }

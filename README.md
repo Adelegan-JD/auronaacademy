@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aurona Academy
 
-## Getting Started
+A responsive Next.js website for Aurona Academy, with a server-side enquiry endpoint and Supabase PostgreSQL persistence.
 
-First, run the development server:
+## Stack
+- Next.js App Router, React, TypeScript
+- Tailwind CSS 4 and project CSS design system
+- Zod request validation
+- Supabase Postgres via its server-side REST API
+- Resend REST API for email notifications
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Local setup
+1. Install Node.js 22 or newer.
+2. Run `npm ci`.
+3. Copy `.env.example` to `.env.local` and fill in the server-side values.
+4. Apply `supabase/migrations/202611230001_create_enquiries.sql` in the Supabase SQL editor.
+5. Run `npm run dev` and open `http://localhost:3000`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The public enquiry form posts to `/api/enquiries`. The server validates input, applies a database-backed limit of five submissions per hashed network identifier per hour, stores the enquiry first, and then attempts an email notification. If email delivery is not configured or fails, the enquiry remains stored and the API reports `notificationStatus: "pending"`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
+See `.env.example`. `SUPABASE_SERVICE_ROLE_KEY`, `RESEND_API_KEY`, and `RATE_LIMIT_SALT` are server-only secrets. Never expose them with a `NEXT_PUBLIC_` prefix or commit real values.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`ENQUIRY_FROM_EMAIL` must be a sender identity verified with Resend. `ENQUIRY_TO_EMAIL` defaults to `auronaacademy@gmail.com`.
 
-## Learn More
+## Database access and privacy
+The migration enables row-level security and removes public/anonymous access. The API uses the Supabase service role key on the server only. The rate-limit table stores a salted hash rather than a raw IP address. Establish and periodically review a retention/deletion schedule before production launch.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
+Import the GitHub repository into Vercel, set environment variables for Production (and Preview if desired), then deploy. Apply the SQL migration before enabling public enquiries. Set `NEXT_PUBLIC_SITE_URL` to the active canonical URL. A custom domain can be connected later in Vercel without changing the app architecture.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Launch gates
+- Create a Supabase project and apply the migration.
+- Add Supabase URL, service-role key, and a strong random `RATE_LIMIT_SALT` to Vercel.
+- Create a Resend account, verify a sender domain/address, and add `RESEND_API_KEY` plus `ENQUIRY_FROM_EMAIL` to Vercel.
+- Review the privacy policy and confirm the retention schedule and business contact details.
+- Run the production build and submit test enquiries before public launch.
