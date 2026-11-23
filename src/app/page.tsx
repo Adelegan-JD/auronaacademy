@@ -127,52 +127,7 @@ const steps = [
 export default function HomePage() {
   return (
     <>
-      <header className="site-header">
-        <div className="container nav-inner">
-          <Link
-            href="/"
-            className="brand"
-            aria-label="Aurona Academy homepage"
-          >
-            <Image
-              src="/images/aurona-logo.png"
-              alt="Aurona Academy"
-              width={180}
-              height={110}
-              className="brand-logo"
-              priority
-            />
-          </Link>
-
-          <nav className="desktop-nav" aria-label="Main navigation">
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/programmes">Programmes</Link>
-            <Link href="/how-it-works">How It Works</Link>
-            <Link href="/contact">Contact</Link>
-            <Link href="/faq">FAQs</Link>
-          </nav>
-
-          <details className="mobile-menu">
-            <summary aria-label="Open navigation menu"><span /><span /><span /></summary>
-            <nav aria-label="Mobile navigation">
-              <Link href="/">Home</Link>
-              <Link href="/about">About</Link>
-              <Link href="/programmes">Programmes</Link>
-              <Link href="/how-it-works">How It Works</Link>
-              <Link href="/contact">Contact</Link>
-              <Link href="/faq">FAQs</Link>
-            </nav>
-          </details>
-
-          <Link className="button button-primary nav-cta" href="/contact">
-            Enquire Now
-            <ArrowRight size={17} aria-hidden="true" />
-          </Link>
-        </div>
-      </header>
-
-      <main>
+<main>
         <section className="hero">
           <div className="container hero-grid">
             <div className="hero-content">
@@ -225,8 +180,8 @@ export default function HomePage() {
             <div className="hero-visual">
               <div className="hero-image-frame">
                 <Image
-                  src="/images/learning-hero.jpg"
-                  alt="Students studying together in an educational setting"
+                  src="/images/learning-hero.svg"
+                  alt="Illustration of two students learning together with a book and laptop"
                   width={900}
                   height={1050}
                   className="hero-image"
@@ -496,55 +451,6 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-
-      <footer className="site-footer">
-        <div className="container footer-grid">
-          <div className="footer-brand">
-            <Link href="/" aria-label="Aurona Academy homepage">
-              <Image
-                src="/images/aurona-logo.png"
-                alt="Aurona Academy"
-                width={160}
-                height={98}
-              />
-            </Link>
-
-            <p>
-              Better Guidance. Brighter Futures.
-            </p>
-
-            <p>
-              Education, Research and Consultancy.
-            </p>
-          </div>
-
-          <div className="footer-column">
-            <h3>Explore</h3>
-            <Link href="/about">About Us</Link>
-            <Link href="/programmes">Programmes</Link>
-            <Link href="/how-it-works">How It Works</Link>
-          </div>
-
-          <div className="footer-column">
-            <h3>Get in Touch</h3>
-            <a href="tel:+14313238372">
-              +1 (431) 323-8372
-            </a>
-            <a href="mailto:auronaacademy@gmail.com">
-              auronaacademy@gmail.com
-            </a>
-            <Link href="/contact">Contact Us</Link>
-          </div>
-        </div>
-
-        <div className="container footer-bottom">
-          <p>
-            © 2026 Aurona Academy. All rights reserved
-          </p>
-
-          <Link href="/privacy">Privacy Policy</Link>
-        </div>
-      </footer>
-    </>
+</>
   );
 }
