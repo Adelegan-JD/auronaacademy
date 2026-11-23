@@ -153,6 +153,18 @@ export default function HomePage() {
             <Link href="/faq">FAQs</Link>
           </nav>
 
+          <details className="mobile-menu">
+            <summary aria-label="Open navigation menu"><span /><span /><span /></summary>
+            <nav aria-label="Mobile navigation">
+              <Link href="/">Home</Link>
+              <Link href="/about">About</Link>
+              <Link href="/programmes">Programmes</Link>
+              <Link href="/how-it-works">How It Works</Link>
+              <Link href="/contact">Contact</Link>
+              <Link href="/faq">FAQs</Link>
+            </nav>
+          </details>
+
           <Link className="button button-primary nav-cta" href="/contact">
             Enquire Now
             <ArrowRight size={17} aria-hidden="true" />
