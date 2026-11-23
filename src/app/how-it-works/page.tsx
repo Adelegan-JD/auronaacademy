@@ -33,7 +33,7 @@ const steps = [
 export default function HowItWorksPage() {
   return (
     <main>
-      <section className="section">
+      <section className="section page-section">
         <div className="container">
           <span className="eyebrow">How It Works</span>
 
