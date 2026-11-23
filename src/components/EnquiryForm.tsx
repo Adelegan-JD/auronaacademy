@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Link from "next/link";
 import { z } from "zod";
 
 const enquirySchema = z.object({
@@ -118,7 +119,7 @@ export default function EnquiryForm() {
         <textarea id="message" name="message" rows={5} maxLength={1500} />
       </div>
       <div className="form-field consent-field">
-        <label><input type="checkbox" name="consent" required /><span>I have read the privacy notice and understand how my enquiry information will be handled.</span></label>
+        <label><input type="checkbox" name="consent" required /><span>I have read the <Link href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Notice</Link> and understand how my enquiry information will be handled.</span></label>
       </div>
       {status === "error" && <p className="form-message form-error" role="alert">{feedback}</p>}
       {status === "success" && <p className="form-message form-success" role="status">{feedback}</p>}
