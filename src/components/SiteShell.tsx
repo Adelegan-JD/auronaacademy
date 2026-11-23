@@ -20,7 +20,7 @@ function Footer() {
     <div className="footer-brand"><Link href="/" aria-label="Aurona Academy homepage"><Image src="/images/aurona-logo.png" alt="Aurona Academy" width={160} height={98} /></Link><p>Better Guidance. Brighter Futures.</p><p>Education, Research and Consultancy.</p><p className="footer-tagline">Learn. Grow. Excel.</p></div>
     <div className="footer-column"><h3>Explore</h3><Link href="/about">About Us</Link><Link href="/programmes">Programmes</Link><Link href="/how-it-works">How It Works</Link><Link href="/faq">Frequently Asked Questions</Link><Link href="/privacy">Privacy Policy</Link></div>
     <div className="footer-column"><h3>Get in Touch</h3><a href="mailto:auronaacademy@gmail.com"><Mail size={16} /> auronaacademy@gmail.com</a><a href="https://wa.me/14313238372" target="_blank" rel="noopener noreferrer"><MessageCircle size={16} /> WhatsApp · Canada</a><a href="https://wa.me/2347069396914" target="_blank" rel="noopener noreferrer"><MessageCircle size={16} /> WhatsApp · Nigeria</a><a href="https://wa.me/2348162541654" target="_blank" rel="noopener noreferrer"><MessageCircle size={16} /> WhatsApp · Nigeria</a></div>
-  </div><div className="container footer-bottom"><p>© {new Date().getFullYear()} Aurona Academy. All rights reserved.</p><p>Better Guidance • Brighter Futures</p></div></footer>;
+  </div><div className="container footer-bottom"><p>© 2026 Aurona Academy. All rights reserved.</p><p>Better Guidance • Brighter Futures</p></div></footer>;
 }
 
 export default function SiteShell({ children }: { children: React.ReactNode }) {
