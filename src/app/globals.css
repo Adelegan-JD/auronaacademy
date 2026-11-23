@@ -1408,3 +1408,44 @@ h2 { font-weight: 700; line-height: 1.13; }
     transition: none;
   }
 }
+
+.page-section {
+  background:
+    radial-gradient(circle at 94% 5%, rgb(201 164 92 / 9%), transparent 24%),
+    linear-gradient(180deg, #fbfcfa 0%, #fff 42%);
+}
+
+.page-section > .container {
+  position: relative;
+}
+
+.page-section .section-heading h1 {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.page-section .section-heading p {
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+.policy-content {
+  max-width: 900px;
+}
+
+.policy-content h2 {
+  margin-top: 2rem;
+  color: var(--color-navy);
+}
+
+.policy-content p {
+  color: var(--color-muted);
+  line-height: 1.85;
+}
+
+.policy-content a:not(.button) {
+  color: var(--color-blue);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
