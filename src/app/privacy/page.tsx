@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <main><section className="section"><div className="container policy-content">
+    <main><section className="section page-section"><div className="container policy-content">
       <span className="eyebrow">Your Information Matters</span>
       <h1>Privacy Policy</h1>
       <p className="page-intro">This notice explains how Aurona Academy handles information you submit through this website. It applies to website enquiries and is not a substitute for any separate terms that may apply when you enrol in a programme.</p>
