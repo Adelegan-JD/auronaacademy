@@ -18,7 +18,7 @@
 .footer-tagline { color: var(--color-gold) !important; font-weight: 750; letter-spacing: .08em; }
 .footer-column a { display: inline-flex; align-items: center; gap: .5rem; }
 @media (max-width: 760px) {
-  .desktop-nav { display: none; }
+  .site-header:has(.mobile-menu) .desktop-nav { display: none; }
   .mobile-menu { display: block; order: 4; }
   .nav-inner { flex-wrap: nowrap; }
 }
