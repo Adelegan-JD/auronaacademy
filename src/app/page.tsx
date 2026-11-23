@@ -527,8 +527,7 @@ export default function HomePage() {
 
         <div className="container footer-bottom">
           <p>
-            © {new Date().getFullYear()} Aurona Academy.
-            All rights reserved.
+            © 2026 Aurona Academy. All rights reserved
           </p>
 
           <Link href="/privacy">Privacy Policy</Link>
