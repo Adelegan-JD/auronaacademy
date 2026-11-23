@@ -17,7 +17,7 @@ The repository, application structure, principal pages, technical configuration,
 | Phase | Description | Status |
 |---|---|---|
 | 1 | Project Audit & Foundation | Complete |
-| 2 | UI/UX Design & Website Refinement | In progress |
+| 2 | UI/UX Design & Website Refinement | Implementation complete; Vercel verification pending |
 | 3 | Enquiry System Development | Initial implementation; refinement pending |
 | 4 | Database & External Services | Production setup pending |
 | 5 | Security & Privacy | Initial controls present; review pending |
@@ -106,6 +106,25 @@ The repository, application structure, principal pages, technical configuration,
 
 No production-readiness claim is made at this stage.
 
+## Phase 2 implementation — completed changes
+
+- Added `public/images/learning-hero.svg`, a locally hosted, branded educational illustration, and updated the homepage to use it instead of the missing JPG.
+- Removed homepage-specific header and footer markup. The root `SiteShell` now renders one shared header and footer on every public route.
+- Converted `SiteShell` into a server component by removing the unnecessary client directive and pathname-based shell bypass.
+- Standardised desktop and mobile navigation across the homepage and supporting pages, with a privacy-notice link in the mobile menu and footer.
+- Removed duplicated Nigerian WhatsApp cards from the Contact page and consolidated contact methods into a data-driven list.
+- Added a direct `/privacy` link to the enquiry consent text; it opens in a new tab so the form is not lost.
+- Updated the browser theme colour to match the refined navy palette.
+- Applied consistent page-section treatment and improved privacy-page readability, card surfaces, FAQ states, contact links, consent-link visibility, and responsive spacing.
+
+### Phase 2 verification state
+
+- Repository checks confirm the homepage no longer contains its own header/footer and references the new local hero asset.
+- Repository checks confirm one shared header/footer component and the enquiry form's direct privacy link.
+- Contact page contains one WhatsApp entry per Nigerian number (two distinct Nigerian contacts), rather than duplicate entries.
+- Vercel check for latest phase 2 commit is pending at the time of this update.
+- Browser-based visual review and full cross-device interaction checks remain part of the QA phase; no claim is made that these have been completed.
+
 ## Immediate next step
 
-Proceed to Phase 2: complete the academic visual refinement, resolve the missing homepage hero asset, consolidate shared navigation/footer, and remove the duplicate contact cards.
+Once the current Vercel check is successful, proceed to Phase 3: refine and harden the custom enquiry workflow.
